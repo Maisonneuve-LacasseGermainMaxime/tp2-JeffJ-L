@@ -62,6 +62,8 @@ class Exercice {
         const id = exercice.id;
 
         this.app.getSupprimer(id);
+        history.pushState({}, "", "/liste");
+        this.app.getRouter().miseAJourURL();
     }
 }
 
